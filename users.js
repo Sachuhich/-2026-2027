@@ -10,7 +10,7 @@ export const usersDatabase = [
     { name: "Слепнева Алёна", kostiks: [] },
     { name: "Алексеева Яна", kostiks: [] },
     { name: "Лагонда Юлианна", kostiks: [] },
-    { name: "Гришина Мария", kostiks: [10+10+5+2+3+1+500] },
+    { name: "Гришина Мария", kostiks: [10,10,5,2,3,1,500] },
     { name: "Ковалева Анастасия", kostiks: [] },
     { name: "Коровина Дарья", kostiks: [] },
     { name: "Корнилова София", kostiks: [] },
