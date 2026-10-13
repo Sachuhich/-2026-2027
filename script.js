@@ -1,5 +1,6 @@
-import { myEvents } from './events.js'; 
-import { renderTierlist } from './tierlist.js'; 
+import { myEvents } from './events.js';
+import { renderTierlist } from './tierlist.js';
+
 
 window.switchPage = function(pageId) {
     document.querySelectorAll('.page').forEach(page => page.classList.remove('active'));
