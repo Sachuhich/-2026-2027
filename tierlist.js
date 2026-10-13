@@ -1,21 +1,21 @@
 const usersDatabase = [
-    { name: "Чеганов Дмитрий", kostiks: [0] },
-    { name: "Попов Кирилл", kostiks: [10, 5, 5, 1, 2] }, 
-    { name: "Пономарёв Владислав", kostiks: [0] },
-    { name: "Тихоньких Ярослав", kostiks: [0] },
-    { name: "Беляев Георгий", kostiks: [0] },
-    { name: "Селюнин Илья", kostiks: [0] },
-    { name: "Епанешникова Ульяна", kostiks: [0] },
-    { name: "Рожинова Дарья", kostiks: [0] },
-    { name: "Слепнева Алёна", kostiks: [0] },
-    { name: "Алексеева Яна", kostiks: [0] },
-    { name: "Лагонда Юлианна", kostiks: [0] },
-    { name: "Гришина Мария", kostiks: [0] },
-    { name: "Ковалева Анастасия", kostiks: [0] },
-    { name: "Коровина Дарья", kostiks: [0] },
-    { name: "Корнилова София", kostiks: [0] },
-    { name: "Писаренко Артём", kostiks: [0] },
-    { name: "Казаков Алексей", kostiks: [0] }
+    { name: "Чеганов Дмитрий", kostiks: [] },
+    { name: "Попов Кирилл", kostiks: [] }, 
+    { name: "Пономарёв Владислав", kostiks: [] },
+    { name: "Тихоньких Ярослав", kostiks: [] },
+    { name: "Беляев Георгий", kostiks: [] },
+    { name: "Селюнин Илья", kostiks: [] },
+    { name: "Епанешникова Ульяна", kostiks: [] },
+    { name: "Рожинова Дарья", kostiks: [] },
+    { name: "Слепнева Алёна", kostiks: [] },
+    { name: "Алексеева Яна", kostiks: [] },
+    { name: "Лагонда Юлианна", kostiks: [] },
+    { name: "Гришина Мария", kostiks: [] },
+    { name: "Ковалева Анастасия", kostiks: [] },
+    { name: "Коровина Дарья", kostiks: [] },
+    { name: "Корнилова София", kostiks: [] },
+    { name: "Писаренко Артём", kostiks: [] },
+    { name: "Казаков Алексей", kostiks: [] }
 ];
 
 let selectedUserName = null;
@@ -85,7 +85,7 @@ function createRatingRow(user, placeMarker, isZero, container) {
 
         if (user.points > 0) {
             const mathematicalString = user.originalKostiks.join(' + ');
-            panel.innerHTML = `<div class="history-text">${mathematicalString} = ${user.points} 🦴</div>`;
+            panel.innerHTML = `<div class="history-text">${mathematicalString} = ${user.points}</div>`;
         } else {
             panel.innerHTML = `<div class="history-text italic-text">Боец не участвовал в активностях</div>`;
         }
