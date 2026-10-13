@@ -11,20 +11,35 @@ body {
     align-items: center;
 }
 
-.main-nav {
+.main-nav-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 750px;
     margin-bottom: 25px;
+    box-sizing: border-box;
+}
+
+.main-nav {
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    box-sizing: border-box;
 }
 
 .nav-btn {
+    flex: 1;
     background-color: #222;
     color: white;
     border: 1px solid #444;
-    padding: 12px 24px;
-    margin: 0 5px;
+    padding: 14px 0;
     cursor: pointer;
     font-size: 16px;
     border-radius: 8px;
     font-weight: bold;
+    text-align: center;
+    transition: 0.3s;
+    min-width: 0;
 }
 
 .nav-btn.active, .nav-btn:hover {
@@ -104,33 +119,36 @@ body {
 .weekdays-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 8px;
+    gap: 4px;
     width: 100%;
     text-align: center;
     font-weight: bold;
     color: #666;
     margin-bottom: 5px;
+    box-sizing: border-box;
 }
 
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 8px;
+    gap: 4px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .day-card, .empty-day {
     background: #1e1e1e;
     border: 1px solid #333;
     border-radius: 8px;
-    padding: 10px;
+    padding: 4px;
     aspect-ratio: 1 / 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     position: relative;
     cursor: pointer;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
 }
 
 .empty-day {
@@ -155,16 +173,13 @@ body {
 
 .day-card.today .day-number {
     color: #ffffff !important;
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 .day-number {
     font-size: 16px;
     font-weight: bold;
     color: #aaa;
-    position: absolute;
-    top: 10px;
-    left: 10px;
+    position: static;
 }
 
 .event-dots-container {
@@ -175,20 +190,19 @@ body {
     height: 100%;
     pointer-events: none;
     box-sizing: border-box;
-    padding: 8px;
+    padding: 4px;
 }
 
 .event-dot-mini {
-    width: 25px;
-    height: 25px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     position: absolute;
     display: none;
 }
-
 .event-dot-mini.bg-odyssey { display: block; top: 6px; right: 6px; }
-.event-dot-mini.bg-spbso   { display: block; top: calc(50% - 12.5px); right: 6px; }
-.event-dot-mini.bg-youth   { display: block; bottom: 6px; right: 6px; }
+.event-dot-mini.bg-spbso   { display: block; bottom: 6px; right: 6px; }
+.event-dot-mini.bg-youth   { display: block; top: 6px; left: 6px; }
 .event-dot-mini.bg-other   { display: block; bottom: 6px; left: 6px; }
 
 .bg-youth { background-color: #0056b3; color: white; }
@@ -199,7 +213,6 @@ body {
 .details-panel {
     grid-column: span 7;
     background: #1a1a1a;
-    border: 1px solid #0070f3;
     border-radius: 8px;
     padding: 15px;
     margin: 5px 0 10px 0;
@@ -224,11 +237,13 @@ body {
 .legend-inline-format {
     margin-top: 30px;
     background: #161616;
-    padding: 15px 25px;
+    padding: 15px;
     border-radius: 8px;
     border: 1px solid #2d2d2d;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px 25px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -281,7 +296,7 @@ body {
 
 .rating-position {
     font-weight: bold;
-    color: #666;
+    color: #6e6e6e;
     width: 45px;
     flex-shrink: 0;
 }
@@ -294,14 +309,14 @@ body {
 
 .rating-score {
     font-weight: bold;
-    color: #00ffa3;
+    color: #6e6e6e;
     text-align: right;
     flex-shrink: 0;
     white-space: nowrap;
 }
 
 .rating-row.zero-row .rating-score {
-    color: #555;
+    color: #6e6e6e;
 }
 
 .zero-users-section {
@@ -319,7 +334,7 @@ body {
 .footer-name {
     font-size: 14px;
     font-weight: 500;
-    color: #ffffff;
+    color: #6e6e6e;
     text-decoration: none;
     white-space: nowrap;
     transition: color 0.2s ease;
@@ -336,7 +351,6 @@ body {
 
 .rating-details-panel {
     background: #1a1a1a;
-    border: 1px solid #0070f3;
     border-radius: 8px;
     padding: 15px 20px;
     margin: -5px 0 5px 0;
@@ -360,5 +374,4 @@ body {
 
 .italic-text {
     font-weight: 500;
-    font-style: italic;
 }
