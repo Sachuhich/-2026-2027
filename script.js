@@ -14,17 +14,20 @@ window.switchPage = function(pageId) {
 
 function getColorClass(type) {
     switch (type.toLowerCase()) {
+        case 'одиссея': 
+            return 'bg-odyssey';
+        case 'шсо': 
+            return 'bg-shso';
+        case 'спбсо': 
+            return 'bg-spbso';
         case 'молодёжный':
         case 'молодежный': 
             return 'bg-youth';
-        case 'одиссея': 
-            return 'bg-odyssey';
-        case 'спбсо': 
-            return 'bg-spbso';
         default: 
             return 'bg-other';
     }
 }
+
 
 const monthsTimeline = [
     { name: "Октябрь", year: 2026, monthIndex: 9 },
