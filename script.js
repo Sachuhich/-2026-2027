@@ -26,7 +26,6 @@ function getColorClass(type) {
 }
 
 const monthsTimeline = [
-    { name: "Сентябрь", year: 2026, monthIndex: 8 },
     { name: "Октябрь", year: 2026, monthIndex: 9 },
     { name: "Ноябрь", year: 2026, monthIndex: 10 },
     { name: "Декабрь", year: 2026, monthIndex: 11 },
