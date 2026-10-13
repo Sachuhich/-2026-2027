@@ -173,6 +173,7 @@ body {
 
 .day-card.today .day-number {
     color: #ffffff !important;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 .day-number {
@@ -194,25 +195,29 @@ body {
 }
 
 .event-dot-mini {
-    width: 10px;
-    height: 10px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     position: absolute;
     display: none;
 }
-.event-dot-mini.bg-odyssey { display: block; top: 6px; right: 6px; }
-.event-dot-mini.bg-spbso   { display: block; bottom: 6px; right: 6px; }
-.event-dot-mini.bg-youth   { display: block; top: 6px; left: 6px; }
-.event-dot-mini.bg-other   { display: block; bottom: 6px; left: 6px; }
 
-.bg-youth { background-color: #0056b3; color: white; }
+/* Новое круговое распределение больших точек по углам */
+.event-dot-mini.bg-odyssey { display: block; top: 6px; right: 6px; }      /* Жёлтый — верхний правый */
+.event-dot-mini.bg-shso    { display: block; bottom: 6px; right: 6px; }   /* Зелёный — нижний правый */
+.event-dot-mini.bg-spbso   { display: block; bottom: 6px; left: 6px; }    /* Красный — нижний левый */
+.event-dot-mini.bg-youth   { display: block; top: 6px; left: 6px; }       /* Синий — верхний левый */
+
+/* Фоновые цвета плашек по новому регламенту */
 .bg-odyssey { background-color: #dca100; color: black; }
-.bg-spbso { background-color: #198754; color: white; }
-.bg-other { background-color: #dc3545; color: white; }
+.bg-shso    { background-color: #198754; color: white; }
+.bg-spbso   { background-color: #dc3545; color: white; }
+.bg-youth   { background-color: #0056b3; color: white; }
 
 .details-panel {
     grid-column: span 7;
     background: #1a1a1a;
+    border: 1px solid #0070f3;
     border-radius: 8px;
     padding: 15px;
     margin: 5px 0 10px 0;
@@ -263,10 +268,11 @@ body {
     display: inline-block;
 }
 
-.youth-dot { background-color: #0056b3; }
+/* Цвета индикаторов в легенде */
 .odyssey-dot { background-color: #dca100; }
-.spbso-dot { background-color: #198754; }
-.other-dot { background-color: #dc3545; }
+.shso-dot    { background-color: #198754; }
+.spbso-dot   { background-color: #dc3545; }
+.youth-dot   { background-color: #0056b3; }
 
 .rating-container {
     display: flex;
@@ -296,7 +302,7 @@ body {
 
 .rating-position {
     font-weight: bold;
-    color: #6e6e6e;
+    color: #666;
     width: 45px;
     flex-shrink: 0;
 }
@@ -309,14 +315,14 @@ body {
 
 .rating-score {
     font-weight: bold;
-    color: #6e6e6e;
+    color: #00ffa3;
     text-align: right;
     flex-shrink: 0;
     white-space: nowrap;
 }
 
 .rating-row.zero-row .rating-score {
-    color: #6e6e6e;
+    color: #555;
 }
 
 .zero-users-section {
@@ -334,7 +340,7 @@ body {
 .footer-name {
     font-size: 14px;
     font-weight: 500;
-    color: #6e6e6e;
+    color: #ffffff;
     text-decoration: none;
     white-space: nowrap;
     transition: color 0.2s ease;
@@ -351,6 +357,7 @@ body {
 
 .rating-details-panel {
     background: #1a1a1a;
+    border: 1px solid #0070f3;
     border-radius: 8px;
     padding: 15px 20px;
     margin: -5px 0 5px 0;
@@ -374,4 +381,5 @@ body {
 
 .italic-text {
     font-weight: 500;
+    font-style: italic;
 }
