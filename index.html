@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь и Рейтинг Костиксов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="main-nav">
+        <button class="nav-btn active" onclick="switchPage('calendar')">📅 Календарь событий</button>
+        <button class="nav-btn" onclick="switchPage('tierlist')">👑 Рейтинг Костиксов</button>
+    </nav>
+
+    <section id="calendar" class="page active">
+        <h2 class="graffiti-title">Календарь событий</h2>
+        
+        <div class="season-grid-wrapper">
+            <div id="month-tabs" class="season-grid"></div>
+        </div>
+
+        <div class="weekdays-grid">
+            <div>Пн</div><div>Вт</div><div>Ср</div><div>Чт</div><div>Пт</div><div>Сб</div><div>Вс</div>
+        </div>
+
+        <div id="calendar-grid" class="calendar-grid"></div>
+
+        <div class="legend-inline-format">
+            <span class="legend-item"><span class="color-dot odyssey-dot"></span> — Одиссея</span>
+            <span class="legend-item"><span class="color-dot spbso-dot"></span> — СПбСО</span>
+            <span class="legend-item"><span class="color-dot youth-dot"></span> — Молодёжный</span>
+            <span class="legend-item"><span class="color-dot other-dot"></span> — иное</span>
+        </div>
+    </section>
+
+    <section id="tierlist" class="page">
+        <h2 class="graffiti-title">Рейтинг Костиксов</h2>
+        
+        <div id="rating-list" class="rating-container"></div>
+
+        <div class="legend-inline-format rating-footer-panel">
+            <a href="https://vk.ru/dmitrieena" target="_blank" class="footer-name">Фадеева Дарья</a>
+            <a href="https://vk.ru/k0st3k" target="_blank" class="footer-name">Дербенев Константин</a>
+            <a href="https://vk.ru/kkvakushkaa" target="_blank" class="footer-name">Дмитриева Анастасия</a>
+            <a href="https://vk.ru/pnp2009" target="_blank" class="footer-name">Погорелов Платон</a>
+        </div>
+    </section>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
